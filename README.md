@@ -57,6 +57,14 @@ $ yarn run test:e2e
 # test coverage
 $ yarn run test:cov
 ```
+## Default User
+
+```bash
+{
+  "email": "admin@test.com",
+  "password": "password"
+}
+```
 
 ## Support
 
@@ -69,4 +77,4 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+  Nest is [MIT licensed](LICENSE).

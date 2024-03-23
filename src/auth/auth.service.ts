@@ -9,6 +9,7 @@ import { RegisterDto } from './dto/register.dto';
 import { JwtService } from '@nestjs/jwt';
 import * as bcryptjs from 'bcryptjs';
 import { LoginDto } from './dto/login.dto';
+import { Role } from 'src/common/enums/rol.enum';
 
 @Injectable()
 export class AuthService {
@@ -44,7 +45,6 @@ export class AuthService {
     if (!isPasswordValid) {
       throw new UnauthorizedException('password is wrong');
     }
-
     const payload = { email: user.email, role: user.role };
     const token = await this.jwtService.signAsync(payload);
 
