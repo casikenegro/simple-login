@@ -1,6 +1,7 @@
 import { Transform } from 'class-transformer';
 import { IsEmail, IsString, MinLength } from 'class-validator';
 import { Role } from 'src/common/enums/rol.enum';
+import * as bcryptjs from 'bcryptjs';
 
 export class CreateUserDto {
   @Transform(({ value }) => value.trim())
